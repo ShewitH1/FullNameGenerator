@@ -2,8 +2,6 @@ package com.pluralsight;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class FullNameGen {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -24,22 +22,25 @@ public class FullNameGen {
         String suffix = scanner.nextLine();
         suffix = suffix.trim();
 
-        String fullName = "";
+//        varibale with fullname as empty
+        String fullName = " ";
+//        middlename is empty just combine first and last names
         if (middleName.isEmpty()){
-            fullName = firstName + ' ' + ' ' + lastName;
-
+            fullName = firstName  + " " + lastName;
         }
+//        if its not empty, combined first, middle, and last names
         else{
-            fullName = firstName + ' ' + middleName + ' ' + lastName;
+            fullName = firstName + " " + middleName + " " + lastName;
 
         }
-        System.out.println("Full Name: " + fullName);
 
-        if(suffix.isEmpty()){
 
-        } else{
-            fullName = firstName + ", " + suffix;
+//        suffix is not empty
+        if(!suffix.isEmpty()){
+            fullName = fullName + ", " + suffix;
+
         }
+
         System.out.println("Full Name: " + fullName);
 
 
